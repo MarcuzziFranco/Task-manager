@@ -1,0 +1,13 @@
+
+.container-form{
+    display: flex;
+    flex-direction: column;    
+}
+
+.container-form > input,textarea{
+    margin-top: 8px;
+}
+
+.container-form > textarea {
+    height: 100px;
+}

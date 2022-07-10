@@ -17,12 +17,14 @@ function App() {
 
   return (
     <div className="App">
-      <div>Task Manager</div>
-      <div>
+      <div className="container-app">
+        <h2 className="Tittle-App">Tasks Manager</h2>
+        <hr />
         <InputTask onNewTask={hadlerNewTask} />
+        <hr />
+        <h3 className="Tittle-List">List tasks</h3>
+        <ListTasks listTask={listTask} />
       </div>
-      <div>List tasks</div>
-      <ListTasks listTask={listTask} />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import { Task } from "../../Interfaces/types";
 import CardTask from "../CardTask/CardTask";
+import "./style.css";
 
 interface Props {
   listTask: Array<Task>;
