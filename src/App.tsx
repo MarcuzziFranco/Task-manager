@@ -3,6 +3,7 @@ import "./App.css";
 import ListTasks from "./Components/ListTasks/ListTasks";
 import { Task } from "../src/Interfaces/types";
 import InputTask from "./Components/InputTask/InputTask";
+import { getAll, create } from "./Services/Services.Task";
 
 interface AppState {
   listTask: Task[];
@@ -12,6 +13,7 @@ function App() {
   const [listTask, setListTask] = useState<AppState["listTask"]>([]);
 
   const hadlerNewTask = (newTask: Task): void => {
+    create(newTask);
     setListTask((listTask) => [...listTask, newTask]);
   };
 
