@@ -60,13 +60,13 @@ const InputTask = ({ onNewTask }: FormProps) => {
         onChange={handleChange}
         value={newTask.description}
       />
-      <ErrorMessage error={error} />
       <input
         className="button"
         type="button"
         value="Create Task"
         onClick={handlerNewTask}
       />
+      <ErrorMessage error={error} />
     </div>
   );
 };

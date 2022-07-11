@@ -1,7 +1,7 @@
 /*Color*/
 .container-form{
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;  
 }
 
 .container-form > input,textarea{
@@ -17,8 +17,12 @@
     background-color: #0E7CC9;
     border: 0px ;
     border-radius: 5px;
+    color:aliceblue;
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .button:hover{
     background-color: #47A6E3
+    
 }

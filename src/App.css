@@ -1,25 +1,47 @@
 .App {
  display: flex;
  flex-direction: column;
- align-items: center;
- 
+ width: 100%;
 }
+
+.NavBar{
+  display: flex;
+  align-items: flex-start;
+  background-color: #0E7CC9;
+  padding-left: 10px;
+}
+
 .container-app{
-  width: 400px;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.container-right{
+  margin: 0px 10px 0px 10px;
+  width: 50%;
+  
+
+}
+
+.container-left{
+  margin: 0px 10px 0px 10px;
+  width: 50%;
+ 
 }
 
 .Tittle-App{
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  margin: 8px 0px 8px 0px;
+  margin: 8px 0px 5px 0px;
 }
 
 .Tittle-List{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 8px 0px 8px 0px;
+  margin: 5px 0px 5px 0px;
 }
 
 
