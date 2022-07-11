@@ -3,9 +3,11 @@ import "./style.css";
 import { useState } from "react";
 import { Task } from "../../Interfaces/types";
 import { v4 as uuid } from "uuid";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
-interface InputTaskState {
+interface FormState {
   inputTaskValues: Task;
+  error: boolean;
 }
 
 const INITIAL_STATE_TASK: Task = {
@@ -21,13 +23,19 @@ interface FormProps {
 
 const InputTask = ({ onNewTask }: FormProps) => {
   const [newTask, setNewTask] =
-    useState<InputTaskState["inputTaskValues"]>(INITIAL_STATE_TASK);
+    useState<FormState["inputTaskValues"]>(INITIAL_STATE_TASK);
+  const [error, setError] = useState<FormState["error"]>(false);
 
   const handlerNewTask = () => {
-    newTask.id = uuid();
-    newTask.finalized = false;
-    onNewTask(newTask);
-    setNewTask(INITIAL_STATE_TASK);
+    if (newTask.tittle === "" && newTask.description === "") {
+      setError(true);
+    } else {
+      newTask.id = uuid();
+      newTask.finalized = false;
+      onNewTask(newTask);
+      setNewTask(INITIAL_STATE_TASK);
+      setError(false);
+    }
   };
 
   const handleChange = (
@@ -52,6 +60,7 @@ const InputTask = ({ onNewTask }: FormProps) => {
         onChange={handleChange}
         value={newTask.description}
       />
+      <ErrorMessage error={error} />
       <input
         className="button"
         type="button"

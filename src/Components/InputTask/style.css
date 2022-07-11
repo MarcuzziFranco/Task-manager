@@ -1,4 +1,4 @@
-
+/*Color*/
 .container-form{
     display: flex;
     flex-direction: column;    
@@ -14,7 +14,11 @@
 
 .button {
     padding: 5px 0px 5px 0px;
-    background-color: #0E7CC9
-    
-     
+    background-color: #0E7CC9;
+    border: 0px ;
+    border-radius: 5px;
+}
+
+.button:hover{
+    background-color: #47A6E3
 }

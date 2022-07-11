@@ -1,0 +1,12 @@
+.error{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0px 0px 0px;
+    border-radius: 5px;
+    padding: 3px 0px 3px 0px;
+    background-color: #ef0030d0 ;
+    color:aliceblue;
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
