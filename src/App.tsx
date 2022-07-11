@@ -13,6 +13,7 @@ function App() {
   const [listTask, setListTask] = useState<AppState["listTask"]>([]);
 
   const hadlerNewTask = (newTask: Task): void => {
+    console.log(newTask);
     create(newTask);
     setListTask((listTask) => [...listTask, newTask]);
   };

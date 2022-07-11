@@ -5,13 +5,15 @@
 }
 
 .container-card {
-    flex-grow: 2;
+    flex-grow: 1;
     margin: 0px;
     padding: 0px;   
     border: solid 1px; 
 }
 
 .container-tittle{
+    display: flex;
+    flex-direction: row;
     margin: 0px;
     padding: 5px;
     background-color: gainsboro;
@@ -20,5 +22,20 @@
 .container-description{
     margin: 0px;
     padding: 5px;
-      
+    height: 100px;     
+}
+
+.tittle{
+    margin: 0px;
+    flex-grow: 1;
+}
+
+.description{
+    margin: 0px;
+}
+
+.icon {
+    width: 25px;
+    height: 25px; 
+    margin: 3px;
 }

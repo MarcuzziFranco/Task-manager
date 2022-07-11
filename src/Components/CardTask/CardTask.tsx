@@ -1,14 +1,26 @@
 import { Task } from "../../Interfaces/types";
+import { remove } from "../../Services/Services.Task";
+import iconRemove from "../../public/remove.svg";
+import iconDelete from "../../public/edit.svg";
 import "./style.css";
 
-export default function CardTask(task: Task) {
+interface Props {
+  task: Task;
+}
+
+export default function CardTask({ task }: Props) {
   return (
     <div className="container">
       <div className="container-card">
-        <h4 className="container-tittle">{task.tittle} </h4>
-        <p className="container-description">{task.description}</p>
+        <div className="container-tittle">
+          <h4 className="tittle">{task.tittle} </h4>
+          <img className="icon" src={iconRemove} onClick={remove} />
+          <img className="icon" src={iconDelete} onClick={remove} />
+        </div>
+        <div className="container-description">
+          <p className="description">{task.description}</p>
+        </div>
       </div>
-      <input type="button" name="erase" value="X" />
     </div>
   );
 }

@@ -2,8 +2,14 @@ import { Task } from "../Interfaces/types";
 
 export const getAll = () => {};
 
-export const create = (task: Task) => {};
+export const create = (task: Task) => {
+  console.log("crear tarea");
+};
 
-const remove = () => {};
+export const remove = () => {
+  console.log("remover tarea");
+};
 
-const update = () => {};
+export const update = () => {
+  console.log("edit tarea");
+};

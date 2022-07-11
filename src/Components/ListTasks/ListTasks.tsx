@@ -12,7 +12,7 @@ export default function ListTasks({ listTask }: Props) {
       {listTask.map((item) => {
         return (
           <li>
-            <CardTask tittle={item.tittle} description={item.description} />
+            <CardTask task={item} />
           </li>
         );
       })}
