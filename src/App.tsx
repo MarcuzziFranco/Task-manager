@@ -1,4 +1,9 @@
-import React, { Component, MouseEventHandler, useState } from "react";
+import React, {
+  Component,
+  MouseEventHandler,
+  useEffect,
+  useState,
+} from "react";
 import "./App.css";
 import ListTasks from "./Components/ListTasks/ListTasks";
 import { Task } from "../src/Interfaces/types";
@@ -11,6 +16,10 @@ interface AppState {
 
 function App() {
   const [listTask, setListTask] = useState<AppState["listTask"]>([]);
+
+  useEffect(() => {
+    setListTask(getAll());
+  }, []);
 
   const hadlerNewTask = (newTask: Task): void => {
     console.log(newTask);

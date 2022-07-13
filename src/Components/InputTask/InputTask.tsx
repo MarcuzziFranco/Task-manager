@@ -14,6 +14,7 @@ const INITIAL_STATE_TASK: Task = {
   id: "",
   tittle: "",
   description: "",
+  priorityLevel: "",
   finalized: false,
 };
 
