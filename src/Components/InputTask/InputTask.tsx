@@ -40,7 +40,9 @@ const InputTask = ({ onNewTask }: FormProps) => {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
   ) => {
     const { value, name } = e.target;
     setNewTask({ ...newTask, [name]: value });
@@ -61,12 +63,23 @@ const InputTask = ({ onNewTask }: FormProps) => {
         onChange={handleChange}
         value={newTask.description}
       />
+      <select
+        onChange={handleChange}
+        name="priorityLevel"
+        value={newTask.priorityLevel}
+      >
+        <option value="apples">Red Apples</option>
+        <option value="oranges">Outrageous Oranges</option>
+        <option value="tomatoes">Technically a Fruit Tomatoes</option>
+        <option value="bananas">Bodacious Bananas</option>
+      </select>
       <input
         className="button"
         type="button"
         value="Create Task"
         onClick={handlerNewTask}
       />
+
       <ErrorMessage error={error} />
     </div>
   );

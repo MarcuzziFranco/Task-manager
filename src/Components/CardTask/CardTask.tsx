@@ -14,6 +14,10 @@ export default function CardTask({ task }: Props) {
       <div className="container-card">
         <div className="container-tittle">
           <h4 className="tittle">{task.tittle} </h4>
+          <div className="priority">
+            <h5>{task.priorityLevel}</h5>
+          </div>
+
           <img className="icon" src={iconRemove} onClick={remove} />
           <img className="icon" src={iconDelete} onClick={remove} />
         </div>

@@ -1,9 +1,4 @@
-import React, {
-  Component,
-  MouseEventHandler,
-  useEffect,
-  useState,
-} from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import ListTasks from "./Components/ListTasks/ListTasks";
 import { Task } from "../src/Interfaces/types";
@@ -18,13 +13,18 @@ function App() {
   const [listTask, setListTask] = useState<AppState["listTask"]>([]);
 
   useEffect(() => {
-    setListTask(getAll());
+    console.log("ejecuta");
+    getAll(handlerLoadListTask);
   }, []);
 
   const hadlerNewTask = (newTask: Task): void => {
     console.log(newTask);
     create(newTask);
     setListTask((listTask) => [...listTask, newTask]);
+  };
+
+  const handlerLoadListTask = (response: Array<Task>) => {
+    setListTask(response);
   };
 
   return (
